@@ -14,10 +14,10 @@ namespace ClinicaVet.Models
 
         public Donos()
         {
-            //
+            //Inicializar a lista de animais associados a um "Dono"
             ListaDeAnimais = new HashSet<Animais>();
         }
-            /// <summary>
+        /// <summary>
         /// PK da tabela
         /// </summary>
         /// 
@@ -27,11 +27,9 @@ namespace ClinicaVet.Models
         public string NIF { get; set; }
 
         /// <summary>
-        /// lista dos animais que o dono tem
-        //
+        /// lista dos animais que o Dono tem
         /// </summary>
         public ICollection<Animais> ListaDeAnimais { get; set; }
-
 
     }
 }

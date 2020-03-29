@@ -16,14 +16,14 @@ namespace ClinicaVet.Models
         /// PK da tabela
         /// </summary>
         /// 
-        [Key] // anotação que força este atributo a ser PK. Mas não seria necessário, pq o atributo chama-se "ID"
+        [Key] // anotação que força este atributo a ser PK. Mas, não seria necessário, pq o atributo chama-se "ID"
         public int ID { set; get; }
 
         public DateTime Date { get; set; }
 
         public string Observacoes { get; set; }
 
-        //criar as chaves forasteiras FK -> estas 3 linhas abaixofazem a FK
+        //criar as chaves forasteiras FK -> estas 3 linhas abaixo fazem a FK
         [ForeignKey("Veterinario")]
         public int VeterinarioFK { get; set; }
         public Veterinarios Veterinario { get; set; } //rtelacionamento a custo deste atributo

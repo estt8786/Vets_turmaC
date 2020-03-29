@@ -40,7 +40,7 @@ namespace ClinicaVet.Models
         /// </summary>
         public string Raca { get; set; }
         /// <summary>
-        /// Foto do animal
+        /// Foto do animal -> Nome do ficheiro com a fotografia do animal
         /// </summary>
         public string Foto { get; set; }
 
@@ -51,7 +51,9 @@ namespace ClinicaVet.Models
         [ForeignKey(nameof(Dono))]
         public int DonoFK { get; set; }
         public Donos Dono { get; set; }
-
+        /// <summary>
+        /// Lista de consultas a que o animal foi levado pelo seu Dono
+        /// </summary>
         public ICollection<Consultas> ListaConsultas  { get; set; }
 
     }

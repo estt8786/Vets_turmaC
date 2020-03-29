@@ -13,6 +13,7 @@ namespace ClinicaVet.Models
     {
         public Veterinarios()
         {
+            // Inicializar a lista de consultas efetuadas por um veterinário
             Consultas = new HashSet<Consultas>();
         }
         /// <summary>
@@ -26,7 +27,9 @@ namespace ClinicaVet.Models
         public string NumCedulaProf { get; set; }
 
         public string Foto { get; set; }
-
+        /// <summary>
+        /// Lista de "Consultas" a que o Veterinário está associado
+        /// </summary>
         public ICollection<Consultas> Consultas { get; set; }
     }
 }
