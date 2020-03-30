@@ -23,9 +23,14 @@ namespace ClinicaVet.Models
         [Key]
         public int ID { set; get; }
 
+        [Required(ErrorMessage ="O Nome é de preenchimento obrigatório")]
+        [StringLength(40,ErrorMessage ="O {0} só pode ter, no máximo, {1} carateres.")]
         public string Nome { get; set; }
+
+        [Required]
         public string NumCedulaProf { get; set; }
 
+        [Required]
         public string Foto { get; set; }
         /// <summary>
         /// Lista de "Consultas" a que o Veterinário está associado

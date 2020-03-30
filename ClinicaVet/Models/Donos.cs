@@ -26,10 +26,12 @@ namespace ClinicaVet.Models
         public string Nome { get; set; }
         public string NIF { get; set; }
 
+
+
         /// <summary>
         /// lista dos animais que o Dono tem
         /// </summary>
-        public ICollection<Animais> ListaDeAnimais { get; set; }
+        public ICollection<Animais> ListaDeAnimais { get; set; } // Dono -----> Animais
 
     }
 }
