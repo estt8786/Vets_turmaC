@@ -16,6 +16,10 @@ namespace ClinicaVet.Models
             // Inicializar a lista de consultas efetuadas por um veterinário
             Consultas = new HashSet<Consultas>();
         }
+
+        // System.ComponentModel.DataAnnotations Namespace
+        // https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=netcore-3.1
+
         /// <summary>
         /// PK da tabela
         /// </summary>

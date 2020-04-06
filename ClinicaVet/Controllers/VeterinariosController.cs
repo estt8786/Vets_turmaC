@@ -39,21 +39,37 @@ namespace ClinicaVet.Controllers
 
 
         // GET: Veterinarios/Details/5
+        /// <summary>
+        /// Mostra os detalhes de um veterinário
+        /// </summary>
+        /// <param name="id">vlor da PK do veterinário. admite um valor NULL, por causa do sinal ? </param>
+        /// <returns></returns>
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {
-                return NotFound();
+                // se o ID é NULL, é porque o meu utilizador está a testar a minha aplicação!!!
+                //return NotFound();
+                // redirecciona para o método INDEX deste mesmo controller!!!
+                return RedirectToAction("Index");
             }
 
-            var veterinarios = await db.Veterinarios.FirstOrDefaultAsync(m => m.ID == id);
+            // esta expressão db.Veterinarios.FirstOrDefaultAsync(m => m.ID == id
+            // é uma forma diferente de escrever o seguinte comando:
+            // SELECT * FROM veterinarios v WHERE v.ID =id     v ---> letra para a tabela veterinarios
+            // esta expressão é escrita em LINQ
+            var veterinario = await db.Veterinarios.FirstOrDefaultAsync(v => v.ID == id); //v---> são os registos numa linha da tabela dos veterinarios 
 
-            if (veterinarios == null)
+            if (veterinario == null)
             {
-                return NotFound();
+                // se o ID é NULL, é porque o meu utilizador está a testar a minha aplicação!!!
+                // ele introduziu um numero que nao existe
+                // redirecciona para o método INDEX deste mesmo controller!!!
+                return RedirectToAction("Index");
+                //return NotFound();
             }
 
-            return View(veterinarios);
+            return View(veterinario);
         }
 
         // GET: Veterinarios/Create
@@ -106,15 +122,28 @@ namespace ClinicaVet.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                // se o ID é NULL, é porque o meu utilizador está a testar a minha aplicação!!!
+                //return NotFound();
+                // redirecciona para o método INDEX deste mesmo controller!!!
+                return RedirectToAction("Index");
             }
 
-            var veterinarios = await db.Veterinarios.FindAsync(id);
-            if (veterinarios == null)
+            // esta expressão db.Veterinarios.FirstOrDefaultAsync(m => m.ID == id
+            // é uma forma diferente de escrever o seguinte comando:
+            // SELECT * FROM veterinarios v WHERE v.ID =id     v ---> letra para a tabela veterinarios
+            // esta expressão é escrita em LINQ
+            var veterinario = await db.Veterinarios.FindAsync(id); //v---> são os registos numa linha da tabela dos veterinarios 
+
+            if (veterinario == null)
             {
-                return NotFound();
+                // se o ID é NULL, é porque o meu utilizador está a testar a minha aplicação!!!
+                // ele introduziu um numero que nao existe
+                // redirecciona para o método INDEX deste mesmo controller!!!
+                return RedirectToAction("Index");
+                //return NotFound();
+
             }
-            return View(veterinarios);
+            return View(veterinario);
         }
 
 
@@ -161,17 +190,28 @@ namespace ClinicaVet.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                // se o ID é NULL, é porque o meu utilizador está a testar a minha aplicação!!!
+                //return NotFound();
+                // redirecciona para o método INDEX deste mesmo controller!!!
+                return RedirectToAction("Index");
             }
 
-            var veterinarios = await db.Veterinarios
-                .FirstOrDefaultAsync(m => m.ID == id);
-            if (veterinarios == null)
+            // esta expressão db.Veterinarios.FirstOrDefaultAsync(m => m.ID == id
+            // é uma forma diferente de escrever o seguinte comando:
+            // SELECT * FROM veterinarios v WHERE v.ID =id     v ---> letra para a tabela veterinarios
+            // esta expressão é escrita em LINQ
+            var veterinario = await db.Veterinarios.FirstOrDefaultAsync(v => v.ID == id); //v---> são os registos numa linha da tabela dos veterinarios 
+
+            if (veterinario == null)
             {
-                return NotFound();
+                // se o ID é NULL, é porque o meu utilizador está a testar a minha aplicação!!!
+                // ele introduziu um numero que nao existe
+                // redirecciona para o método INDEX deste mesmo controller!!!
+                return RedirectToAction("Index");
+                //return NotFound();
             }
 
-            return View(veterinarios);
+            return View(veterinario);
         }
 
 
