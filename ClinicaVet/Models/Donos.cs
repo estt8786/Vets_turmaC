@@ -23,7 +23,16 @@ namespace ClinicaVet.Models
         /// 
         [Key]
         public int ID { set; get; }
+        [Display(Name = "Nome do Dono do Animal")]
+        [Required(ErrorMessage = "Introduza um nome válido.")]
+        [StringLength(75, ErrorMessage = "O {0} poderá ter no máximo {1} caracteres.")]
+        [RegularExpression("[A-ZÁÉÍÓÚÂ][a-záéíóúàèìòùäëïöüãõâêîôûçñ]+(( | e | de | d[ao](s)? |-|'| d')[A-ZÁÉÍÓÚÂ][a-záéíóúàèìòùäëïöüãõâêîôûçñ]+){1,3}",
+                 ErrorMessage = "Só são aceites nomes, começados por letra Maiúscula, separados entre si por um espaço em branco.")]
         public string Nome { get; set; }
+        [Required(ErrorMessage ="O NIF é de preeenchimento obrigatório")]
+        [StringLength(9,ErrorMessage = "O {0} poderá ter no máximo {1} caracteres.")]
+        [RegularExpression("[1-9][0-9]{8}",ErrorMessage ="Só aceita NIF válidos, com 9 digitos e introduzidos corretamente")]
+        [Display(Name = "Nº Identificação Fiscal")]
         public string NIF { get; set; }
 
 
