@@ -19,8 +19,7 @@ namespace ClinicaVet.Models
         [Key] // anotação que força este atributo a ser PK. Mas, não seria necessário, pq o atributo chama-se "ID"
         public int ID { set; get; }
 
-        public DateTime Date { get; set; }
-
+        public DateTime Data { get; set; }
         public string Observacoes { get; set; }
 
         //criar as chaves forasteiras FK -> estas 3 linhas abaixo fazem a FK
@@ -31,6 +30,7 @@ namespace ClinicaVet.Models
         [ForeignKey(nameof(Animal))]
         public int AnimalFK { get; set; }
         public Animais Animal { get; set; }
+        
 
     }
 }

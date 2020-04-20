@@ -46,6 +46,8 @@ namespace ClinicaVet.Models
         /// <summary>
         /// Lista de "Consultas" a que o Veterinário está associado
         /// </summary>
+        /// 
+       
         public ICollection<Consultas> Consultas { get; set; }
     }
 }

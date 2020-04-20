@@ -35,6 +35,8 @@ namespace ClinicaVet.Models
         [Display(Name = "Nº Identificação Fiscal")]
         public string NIF { get; set; }
 
+        public String Sexo { set; get; }
+
 
 
         /// <summary>
