@@ -61,7 +61,7 @@ namespace ClinicaVet.Models
         /// <summary>
         /// Lista de consultas a que o animal foi levado pelo seu Dono
         /// </summary>
-        public ICollection<Consultas> ListaConsultas  { get; set; }
+        public virtual ICollection<Consultas> ListaConsultas  { get; set; }
 
     }
 }

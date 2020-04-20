@@ -48,6 +48,6 @@ namespace ClinicaVet.Models
         /// </summary>
         /// 
        
-        public ICollection<Consultas> Consultas { get; set; }
+        public virtual ICollection<Consultas> Consultas { get; set; }
     }
 }

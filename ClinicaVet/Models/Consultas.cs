@@ -29,7 +29,7 @@ namespace ClinicaVet.Models
 
         [ForeignKey(nameof(Animal))]
         public int AnimalFK { get; set; }
-        public Animais Animal { get; set; }
+        public virtual Animais Animal { get; set; }
         
 
     }
