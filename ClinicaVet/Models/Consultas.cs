@@ -25,7 +25,7 @@ namespace ClinicaVet.Models
         //criar as chaves forasteiras FK -> estas 3 linhas abaixo fazem a FK
         [ForeignKey("Veterinario")]
         public int VeterinarioFK { get; set; }
-        public Veterinarios Veterinario { get; set; } //rtelacionamento a custo deste atributo
+        public virtual Veterinarios Veterinario { get; set; } //rtelacionamento a custo deste atributo
 
         [ForeignKey(nameof(Animal))]
         public int AnimalFK { get; set; }

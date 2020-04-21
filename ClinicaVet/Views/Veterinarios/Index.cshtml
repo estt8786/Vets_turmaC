@@ -7,7 +7,7 @@
 <h1>Veterinários</h1>
 
 <p>
-    <a asp-action="Create">Adicionar Novo Veterinário</a>
+    <a asp-action="Create">Adicionar novo Veterinário</a>
 </p>
 <table class="table">
     <thead>
@@ -34,9 +34,9 @@
                 @Html.DisplayFor(modelItem => item.NumCedulaProf)
             </td>
             <td>
-                <a asp-action="Details" asp-route-id="@item.ID">Detalhes</a>
-                <img src="~/Images/Vets/@item.Foto" width="100" alt="aqui deveria aparecer a foto @item.Foto" title="Foto do Veterinário" />
-                <a></a>
+                <a asp-action="Details" asp-route-id="@item.ID">
+                <img src="~/Imagens/Vets/@item.Foto" width="100" alt="aqui deveria aparecer a foto @item.Foto" title="@item.Nome" />
+                </a>
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ID">Editar</a> |

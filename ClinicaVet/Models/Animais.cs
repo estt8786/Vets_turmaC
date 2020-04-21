@@ -53,7 +53,7 @@ namespace ClinicaVet.Models
         /// 
         [ForeignKey(nameof(Dono))] // Aninais ----> Dono
         public int DonoFK { get; set; }
-        public Donos Dono { get; set; }
+        public virtual Donos Dono { get; set; }
 
 
 

@@ -1,12 +1,12 @@
 ﻿@model ClinicaVet.Models.Veterinarios
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar Veterinário";
 }
 
-<h1>Edit</h1>
+<h1>Editar</h1>
 
-<h4>Veterinarios</h4>
+<h4>Veterinários</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -29,14 +29,14 @@
                 <span asp-validation-for="Foto" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Gravar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Regressar à Listagem</a>
 </div>
 
 @section Scripts {
